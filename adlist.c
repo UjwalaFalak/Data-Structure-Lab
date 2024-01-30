@@ -1,62 +1,68 @@
-#include<stdio.h>
-#include<stdlib.h>
-#define maxnode 4
-
-typedef struct node
+#include <stdio.h>
+#include <stdlib.h>
+int no_vertices;
+struct node
 {
-   int vertexnum;
+    int data;
     struct node *next;
-}node;
-typedef struct list
+};
+void create_graph(struct node *adj[])
 {
-    node * head;
-}list;
-list * adjlist[maxnode]={0};
+    struct node *newnode;
+    int i, j, k, data;
+    for (i = 0; i <no_vertices; i++)
+    {
+        struct node *last = NULL;
+        printf("\nenter the number of adjacent vertice of %d\t", i);
+        scanf("%d", &k);
+        for (j = 0; j < k; j++)
+        {
 
-void main()
-{
-	int i;
-	for(i=0;i<maxnode;i++)
-	{
-		adjlist[i]=(list *)malloc(sizeof(list));
-		adjlist[i]->head=NULL;
-	}
-addnode(0,1);
-addnode(0,3);
-addnode(1,2);
-printlist();
+            printf("enter the value of %d neighbour of %d ", j, i);
+            scanf("%d", &data);
+            newnode = (struct node *)malloc(sizeof(struct node));
+            newnode->data = data;
+            newnode->next = NULL;
+            if (adj[i] == NULL)
+            {
+                adj[i] = newnode;
+            }
+            else
+            {
+                last->next = newnode;
+            }
+            last = newnode;
+        }
+    }
 }
 
-void addnode(int s,int d)
-{
-	node *src,*temp,*dest;
-	if(adjlist[s]->head==NULL)
-	{
-		src=(node *)malloc(sizeof(node));
-		src->vertexnum=s;
-		src->next=NULL;
-		adjlist[s]->head=src;
-	}
-	dest=(node *)malloc(sizeof(node));
-	dest->vertexnum=d;
-	src->next=NULL;
-	temp=adjlist[s]->head;
-	while(temp->next!=NULL)
-	temp=temp->next;
-	temp->next=dest;
+void print_graph(struct node *adj[]){
+    struct node *temp=NULL;
+    int i,j;
+    for(i=0;i<no_vertices;i++)
+    {
+        temp=adj[i];
+        printf("\nthe neighbours of %d are\t",i);
+        while(temp!=NULL)
+        {
+            printf("%d\t",temp->data);
+            temp= temp->next;
+        }
+    }
 }
- void printlist()
+int main()
 {
-int i;
-	for(i=1;i<maxnode;++i)
-	{
-		node *p=adjlist[i]->head;
-		printf("Adjacency list of vertex%d",i);
-		while(p)
-		{
-			printf("%d",p->vertexnum);
-			p=p->next;
-		}
-	printf("\n");
-	}
+    int i, j;
+    printf("\nenter the total no of vertices\t");
+    scanf("%d", &no_vertices);
+    struct node *adj[no_vertices];
+    for (i = 0; i < no_vertices; i++)
+    {
+        adj[i] = NULL;
+    }
+    create_graph(adj);
+    printf("\nthe elements of the graph are\n");
+    print_graph(adj);
+    return 0;
 }
+
