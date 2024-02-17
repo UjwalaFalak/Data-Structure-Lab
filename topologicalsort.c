@@ -53,3 +53,12 @@ void main()
  }
  topology();
 }
+---------------output-------------------------------------
+Enter the no of jobs: 4
+Enter the adjacency matrix:
+0 1 1 1
+0 0 0 1
+0 0 0 0
+0 0 1 0
+The topological sequence is:1 2 4 3
+ 
