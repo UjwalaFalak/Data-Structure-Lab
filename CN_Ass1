@@ -1,0 +1,1658 @@
+1. hostname :- Display the Machine name.
+
+[root@localhost Desktop]# hostname
+localhost.localdomain
+
+
+2. hostname -d :- Display the domain name of the machine.
+
+[root@localhost Desktop]# hostname -d
+
+If domain name is set then only it will display otherwise nothing get display.
+
+3. hostname -f :- Display the fully qualified host and domain name.
+
+[root@localhost Desktop]# hostname -f
+localhost
+
+
+4. hostname -i :- Display the IP address for the current machine.
+[root@localhost Desktop]# hostname -i
+::1 127.0.0.1
+
+
+5. ping :- This command is used to test connectivity between two nodes. You can ping host name or ip address. Using command ping <ip-address> or ping www.google.com
+
+[root@localhost Desktop]# ping
+Usage: ping [-aAbBdDfhLnOqrRUvV] [-c count] [-i interval] [-I interface]
+            [-m mark] [-M pmtudisc_option] [-l preload] [-p pattern] [-Q tos]
+            [-s packetsize] [-S sndbuf] [-t ttl] [-T timestamp_option]
+            [-w deadline] [-W timeout] [hop1 ...] destination
+[root@localhost Desktop]# ping 127.0.0.1
+PING 127.0.0.1 (127.0.0.1) 56(84) bytes of data.
+64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.104 ms
+64 bytes from 127.0.0.1: icmp_seq=2 ttl=64 time=0.088 ms
+64 bytes from 127.0.0.1: icmp_seq=3 ttl=64 time=0.097 ms
+64 bytes from 127.0.0.1: icmp_seq=4 ttl=64 time=0.088 ms
+64 bytes from 127.0.0.1: icmp_seq=5 ttl=64 time=0.093 ms
+64 bytes from 127.0.0.1: icmp_seq=6 ttl=64 time=0.089 ms
+64 bytes from 127.0.0.1: icmp_seq=7 ttl=64 time=0.089 ms
+64 bytes from 127.0.0.1: icmp_seq=8 ttl=64 time=0.052 ms
+64 bytes from 127.0.0.1: icmp_seq=9 ttl=64 time=0.088 ms
+64 bytes from 127.0.0.1: icmp_seq=10 ttl=64 time=0.085 ms
+64 bytes from 127.0.0.1: icmp_seq=11 ttl=64 time=0.096 ms
+64 bytes from 127.0.0.1: icmp_seq=12 ttl=64 time=0.089 ms
+64 bytes from 127.0.0.1: icmp_seq=13 ttl=64 time=0.089 ms
+64 bytes from 127.0.0.1: icmp_seq=14 ttl=64 time=0.092 ms
+64 bytes from 127.0.0.1: icmp_seq=15 ttl=64 time=0.087 ms
+64 bytes from 127.0.0.1: icmp_seq=16 ttl=64 time=0.090 ms
+64 bytes from 127.0.0.1: icmp_seq=17 ttl=64 time=0.095 ms
+64 bytes from 127.0.0.1: icmp_seq=18 ttl=64 time=0.091 ms
+64 bytes from 127.0.0.1: icmp_seq=19 ttl=64 time=0.093 ms
+64 bytes from 127.0.0.1: icmp_seq=20 ttl=64 time=0.087 ms
+64 bytes from 127.0.0.1: icmp_seq=21 ttl=64 time=0.088 ms
+^Z
+[1]+  Stopped                 ping 127.0.0.1
+
+
+6. netstat :- netstat ( Network Statistic ) command displays interfaces, connection information, routing table information.
+
+[root@localhost Desktop]# netstat
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+Active UNIX domain sockets (w/o servers)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  5      [ ]         DGRAM                    7711     /run/systemd/journal/socket
+unix  23     [ ]         DGRAM                    7713     /dev/log
+unix  2      [ ]         DGRAM                    8765     @/org/freedesktop/systemd1/notify
+unix  2      [ ]         DGRAM                    11932    /run/systemd/shutdownd
+unix  2      [ ]         DGRAM                    19329    
+unix  3      [ ]         STREAM     CONNECTED     16881    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     38854    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22611    
+unix  3      [ ]         STREAM     CONNECTED     16613    
+unix  3      [ ]         STREAM     CONNECTED     39708    
+unix  3      [ ]         STREAM     CONNECTED     39210    
+unix  3      [ ]         STREAM     CONNECTED     22636    
+unix  2      [ ]         DGRAM                    22294    
+unix  2      [ ]         DGRAM                    15623    
+unix  3      [ ]         STREAM     CONNECTED     22676    
+unix  3      [ ]         STREAM     CONNECTED     40991    @/tmp/.ICE-unix/4665
+unix  3      [ ]         STREAM     CONNECTED     39470    /run/user/0/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     39589    
+unix  3      [ ]         STREAM     CONNECTED     17947    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     38832    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     22663    
+unix  3      [ ]         STREAM     CONNECTED     39747    
+unix  3      [ ]         STREAM     CONNECTED     15942    
+unix  3      [ ]         STREAM     CONNECTED     38852    
+unix  3      [ ]         STREAM     CONNECTED     39320    
+unix  3      [ ]         STREAM     CONNECTED     19813    
+unix  3      [ ]         STREAM     CONNECTED     35957    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22613    
+unix  3      [ ]         STREAM     CONNECTED     38604    
+unix  3      [ ]         STREAM     CONNECTED     27731    
+unix  3      [ ]         STREAM     CONNECTED     39771    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     39702    
+unix  3      [ ]         STREAM     CONNECTED     16763    
+unix  3      [ ]         STREAM     CONNECTED     39910    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     27390    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22640    
+unix  3      [ ]         STREAM     CONNECTED     39459    
+unix  3      [ ]         STREAM     CONNECTED     38742    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39592    
+unix  3      [ ]         STREAM     CONNECTED     16884    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     40983    @/tmp/dbus-BFP8hts6
+unix  3      [ ]         STREAM     CONNECTED     39931    
+unix  3      [ ]         STREAM     CONNECTED     39364    
+unix  3      [ ]         STREAM     CONNECTED     38553    
+unix  3      [ ]         STREAM     CONNECTED     38463    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     39272    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     27520    
+unix  3      [ ]         STREAM     CONNECTED     22624    
+unix  2      [ ]         DGRAM                    16734    
+unix  3      [ ]         STREAM     CONNECTED     40158    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     40131    @/dbus-vfs-daemon/socket-ChlUJ0GV
+unix  3      [ ]         STREAM     CONNECTED     38615    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39392    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     38605    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     23999    
+unix  3      [ ]         STREAM     CONNECTED     38844    
+unix  3      [ ]         STREAM     CONNECTED     20439    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     38714    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     39484    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     23139    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22655    
+unix  3      [ ]         STREAM     CONNECTED     40236    
+unix  3      [ ]         STREAM     CONNECTED     39933    
+unix  3      [ ]         STREAM     CONNECTED     39528    
+unix  3      [ ]         STREAM     CONNECTED     17961    
+unix  3      [ ]         STREAM     CONNECTED     40050    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     39317    
+unix  3      [ ]         STREAM     CONNECTED     37006    
+unix  3      [ ]         STREAM     CONNECTED     18958    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     39002    @/tmp/dbus-OlHkCuf1
+unix  2      [ ]         DGRAM                    12737    
+unix  3      [ ]         STREAM     CONNECTED     39817    @/tmp/dbus-BFP8hts6
+unix  3      [ ]         STREAM     CONNECTED     39608    
+unix  3      [ ]         STREAM     CONNECTED     39248    @/tmp/dbus-Rq9lgNQFpJ
+unix  3      [ ]         STREAM     CONNECTED     16716    
+unix  3      [ ]         STREAM     CONNECTED     39199    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     23992    
+unix  3      [ ]         STREAM     CONNECTED     19066    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     16196    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     40987    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39521    @/tmp/dbus-BFP8hts6
+unix  3      [ ]         STREAM     CONNECTED     38617    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     22672    
+unix  3      [ ]         STREAM     CONNECTED     39905    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     39526    
+unix  3      [ ]         STREAM     CONNECTED     22648    
+unix  2      [ ]         DGRAM                    22398    
+unix  3      [ ]         STREAM     CONNECTED     40296    
+unix  3      [ ]         STREAM     CONNECTED     39753    
+unix  3      [ ]         STREAM     CONNECTED     39969    
+unix  3      [ ]         STREAM     CONNECTED     22651    
+unix  3      [ ]         STREAM     CONNECTED     40444    
+unix  3      [ ]         STREAM     CONNECTED     15205    
+unix  3      [ ]         STREAM     CONNECTED     39406    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     22627    
+unix  3      [ ]         STREAM     CONNECTED     16009    
+unix  3      [ ]         STREAM     CONNECTED     38123    
+unix  2      [ ]         DGRAM                    15928    
+unix  3      [ ]         STREAM     CONNECTED     39442    
+unix  3      [ ]         STREAM     CONNECTED     38612    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22637    
+unix  3      [ ]         STREAM     CONNECTED     39612    /var/run/NetworkManager/private
+unix  3      [ ]         STREAM     CONNECTED     15622    
+unix  3      [ ]         STREAM     CONNECTED     40990    
+unix  3      [ ]         STREAM     CONNECTED     39461    
+unix  3      [ ]         STREAM     CONNECTED     38794    
+unix  3      [ ]         STREAM     CONNECTED     21593    
+unix  3      [ ]         STREAM     CONNECTED     17620    
+unix  3      [ ]         STREAM     CONNECTED     39374    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     22610    
+unix  3      [ ]         STREAM     CONNECTED     22621    
+unix  3      [ ]         STREAM     CONNECTED     39705    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     39247    
+unix  3      [ ]         STREAM     CONNECTED     38428    
+unix  3      [ ]         STREAM     CONNECTED     18026    
+unix  3      [ ]         STREAM     CONNECTED     39321    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     19864    
+unix  3      [ ]         STREAM     CONNECTED     38891    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39957    /var/run/NetworkManager/private
+unix  3      [ ]         STREAM     CONNECTED     15901    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     38836    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     22664    
+unix  3      [ ]         STREAM     CONNECTED     40440    
+unix  3      [ ]         STREAM     CONNECTED     39748    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22633    
+unix  3      [ ]         STREAM     CONNECTED     39909    
+unix  3      [ ]         STREAM     CONNECTED     15621    
+unix  3      [ ]         STREAM     CONNECTED     41033    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39768    
+unix  3      [ ]         STREAM     CONNECTED     17807    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     38741    
+unix  3      [ ]         STREAM     CONNECTED     22681    
+unix  3      [ ]         STREAM     CONNECTED     35956    
+unix  3      [ ]         STREAM     CONNECTED     38795    @/tmp/dbus-LVCCCngqdf
+unix  2      [ ]         DGRAM                    19247    
+unix  2      [ ]         DGRAM                    18018    
+unix  3      [ ]         STREAM     CONNECTED     39770    
+unix  3      [ ]         STREAM     CONNECTED     26581    
+unix  3      [ ]         STREAM     CONNECTED     17804    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39206    @/tmp/dbus-Rq9lgNQFpJ
+unix  3      [ ]         STREAM     CONNECTED     39271    
+unix  3      [ ]         STREAM     CONNECTED     27521    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22625    
+unix  3      [ ]         STREAM     CONNECTED     39962    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     15902    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     40351    
+unix  3      [ ]         STREAM     CONNECTED     39932    @/tmp/dbus-Rq9lgNQFpJ
+unix  3      [ ]         STREAM     CONNECTED     39339    
+unix  3      [ ]         STREAM     CONNECTED     22660    
+unix  3      [ ]         STREAM     CONNECTED     22669    
+unix  3      [ ]         STREAM     CONNECTED     40964    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     39505    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     39441    /run/user/0/pulse/native
+unix  2      [ ]         DGRAM                    27381    
+unix  3      [ ]         STREAM     CONNECTED     22645    
+unix  3      [ ]         STREAM     CONNECTED     15751    
+unix  2      [ ]         DGRAM                    16725    
+unix  3      [ ]         STREAM     CONNECTED     39839    
+unix  3      [ ]         STREAM     CONNECTED     26358    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     24000    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     18957    
+unix  3      [ ]         STREAM     CONNECTED     39360    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     38588    
+unix  3      [ ]         STREAM     CONNECTED     40049    
+unix  3      [ ]         STREAM     CONNECTED     39318    /var/run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    23315    
+unix  3      [ ]         STREAM     CONNECTED     40130    
+unix  3      [ ]         STREAM     CONNECTED     39205    
+unix  3      [ ]         STREAM     CONNECTED     18027    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     17798    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     23138    
+unix  3      [ ]         STREAM     CONNECTED     40291    
+unix  3      [ ]         STREAM     CONNECTED     39529    @/tmp/dbus-BFP8hts6
+unix  2      [ ]         DGRAM                    17877    
+unix  3      [ ]         STREAM     CONNECTED     40986    
+unix  3      [ ]         STREAM     CONNECTED     39472    
+unix  3      [ ]         STREAM     CONNECTED     39967    
+unix  3      [ ]         STREAM     CONNECTED     22673    
+unix  3      [ ]         STREAM     CONNECTED     41188    
+unix  3      [ ]         STREAM     CONNECTED     39841    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39446    
+unix  3      [ ]         STREAM     CONNECTED     22649    
+unix  3      [ ]         STREAM     CONNECTED     17810    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39816    
+unix  3      [ ]         STREAM     CONNECTED     39607    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     27380    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22618    
+unix  3      [ ]         STREAM     CONNECTED     39595    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     38587    
+unix  3      [ ]         STREAM     CONNECTED     23993    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     19065    
+unix  3      [ ]         STREAM     CONNECTED     16195    
+unix  3      [ ]         STREAM     CONNECTED     36059    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     23791    
+unix  3      [ ]         STREAM     CONNECTED     40438    
+unix  3      [ ]         STREAM     CONNECTED     39754    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     38818    @/tmp/.ICE-unix/4665
+unix  3      [ ]         STREAM     CONNECTED     22652    
+unix  3      [ ]         STREAM     CONNECTED     41191    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     15275    
+unix  3      [ ]         STREAM     CONNECTED     39590    
+unix  3      [ ]         STREAM     CONNECTED     15276    
+unix  3      [ ]         STREAM     CONNECTED     40242    
+unix  3      [ ]         STREAM     CONNECTED     27389    
+unix  3      [ ]         STREAM     CONNECTED     38552    
+unix  3      [ ]         DGRAM                    12747    
+unix  3      [ ]         STREAM     CONNECTED     19865    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     38885    
+unix  3      [ ]         STREAM     CONNECTED     38609    
+unix  3      [ ]         STREAM     CONNECTED     39069    
+unix  3      [ ]         STREAM     CONNECTED     17813    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39378    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     38601    @/tmp/dbus-Rq9lgNQFpJ
+unix  3      [ ]         STREAM     CONNECTED     39870    
+unix  3      [ ]         STREAM     CONNECTED     38888    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     22634    
+unix  3      [ ]         STREAM     CONNECTED     16769    
+unix  3      [ ]         STREAM     CONNECTED     39927    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     40168    
+unix  3      [ ]         STREAM     CONNECTED     22678    
+unix  3      [ ]         STREAM     CONNECTED     40297    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     39504    
+unix  3      [ ]         STREAM     CONNECTED     40125    
+unix  3      [ ]         STREAM     CONNECTED     17771    
+unix  3      [ ]         STREAM     CONNECTED     40981    @/dbus-vfs-daemon/socket-91t2sKvs
+unix  3      [ ]         STREAM     CONNECTED     38811    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     22661    
+unix  3      [ ]         STREAM     CONNECTED     15941    
+unix  3      [ ]         STREAM     CONNECTED     18040    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     16140    
+unix  3      [ ]         STREAM     CONNECTED     39769    /var/run/NetworkManager/private
+unix  3      [ ]         STREAM     CONNECTED     39198    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         DGRAM                    12748    
+unix  3      [ ]         STREAM     CONNECTED     39525    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39298    
+unix  3      [ ]         STREAM     CONNECTED     38602    
+unix  3      [ ]         STREAM     CONNECTED     38826    
+unix  3      [ ]         STREAM     CONNECTED     39704    
+unix  3      [ ]         STREAM     CONNECTED     18039    
+unix  3      [ ]         STREAM     CONNECTED     15624    
+unix  3      [ ]         STREAM     CONNECTED     39208    
+unix  3      [ ]         STREAM     CONNECTED     39447    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     38713    
+unix  3      [ ]         STREAM     CONNECTED     22682    
+unix  3      [ ]         STREAM     CONNECTED     39354    
+unix  3      [ ]         STREAM     CONNECTED     22657    
+unix  3      [ ]         STREAM     CONNECTED     41187    @/tmp/dbus-Rq9lgNQFpJ
+unix  3      [ ]         STREAM     CONNECTED     39757    
+unix  3      [ ]         STREAM     CONNECTED     39522    
+unix  3      [ ]         STREAM     CONNECTED     39584    
+unix  2      [ ]         DGRAM                    17951    
+unix  3      [ ]         STREAM     CONNECTED     40053    
+unix  3      [ ]         STREAM     CONNECTED     38907    
+unix  3      [ ]         STREAM     CONNECTED     38472    
+unix  2      [ ]         DGRAM                    12417    
+unix  3      [ ]         STREAM     CONNECTED     16010    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     17801    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     40166    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39209    
+unix  3      [ ]         STREAM     CONNECTED     38778    
+unix  3      [ ]         STREAM     CONNECTED     18015    
+unix  2      [ ]         DGRAM                    38857    
+unix  3      [ ]         STREAM     CONNECTED     22614    
+unix  3      [ ]         STREAM     CONNECTED     22670    
+unix  3      [ ]         STREAM     CONNECTED     40963    
+unix  3      [ ]         STREAM     CONNECTED     38901    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22642    
+unix  3      [ ]         STREAM     CONNECTED     16798    
+unix  3      [ ]         STREAM     CONNECTED     39908    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     41190    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     41189    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     26357    
+unix  3      [ ]         STREAM     CONNECTED     39588    
+unix  3      [ ]         STREAM     CONNECTED     17797    
+unix  3      [ ]         STREAM     CONNECTED     38887    
+unix  3      [ ]         STREAM     CONNECTED     16141    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     40069    
+unix  2      [ ]         STREAM     CONNECTED     39401    
+unix  3      [ ]         STREAM     CONNECTED     22628    
+unix  3      [ ]         STREAM     CONNECTED     15946    
+unix  3      [ ]         STREAM     CONNECTED     39606    
+unix  2      [ ]         DGRAM                    38263    
+unix  3      [ ]         STREAM     CONNECTED     12575    
+unix  3      [ ]         STREAM     CONNECTED     40127    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     38614    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     39093    
+unix  3      [ ]         STREAM     CONNECTED     22620    
+unix  2      [ ]         DGRAM                    38851    
+unix  3      [ ]         STREAM     CONNECTED     38600    
+unix  3      [ ]         STREAM     CONNECTED     23792    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     16252    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     39462    @/tmp/dbus-LVCCCngqdf
+unix  2      [ ]         STREAM     CONNECTED     37765    @/tmp/dbus-QyHWjutH
+unix  2      [ ]         DGRAM                    39899    
+unix  2      [ ]         DGRAM                    15752    
+unix  3      [ ]         STREAM     CONNECTED     22646    
+unix  3      [ ]         STREAM     CONNECTED     16864    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     38473    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     15899    
+unix  3      [ ]         STREAM     CONNECTED     39270    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     39207    
+unix  3      [ ]         STREAM     CONNECTED     39399    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     39958    /var/run/NetworkManager/private
+unix  3      [ ]         STREAM     CONNECTED     15903    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     40164    
+unix  3      [ ]         STREAM     CONNECTED     38824    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22666    
+unix  3      [ ]         STREAM     CONNECTED     39924    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39440    
+unix  3      [ ]         STREAM     CONNECTED     38611    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     39926    
+unix  3      [ ]         STREAM     CONNECTED     39912    @/tmp/.X11-unix/X0
+unix  2      [ ]         DGRAM                    15626    
+unix  3      [ ]         STREAM     CONNECTED     38616    
+unix  3      [ ]         STREAM     CONNECTED     22679    
+unix  3      [ ]         STREAM     CONNECTED     17946    
+unix  3      [ ]         STREAM     CONNECTED     40988    
+unix  3      [ ]         STREAM     CONNECTED     39469    
+unix  3      [ ]         STREAM     CONNECTED     39070    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     17502    
+unix  3      [ ]         STREAM     CONNECTED     39963    
+unix  3      [ ]         STREAM     CONNECTED     15916    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     39871    @/tmp/dbus-BFP8hts6
+unix  3      [ ]         STREAM     CONNECTED     39997    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     23784    
+unix  3      [ ]         STREAM     CONNECTED     22617    
+unix  3      [ ]         STREAM     CONNECTED     38427    
+unix  2      [ ]         DGRAM                    22702    
+unix  3      [ ]         STREAM     CONNECTED     13556    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     38890    
+unix  3      [ ]         STREAM     CONNECTED     40001    @/tmp/.ICE-unix/4665
+unix  3      [ ]         STREAM     CONNECTED     39269    
+unix  3      [ ]         STREAM     CONNECTED     19814    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     40126    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     40967    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     15016    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22639    
+unix  3      [ ]         STREAM     CONNECTED     39460    @/tmp/dbus-Rq9lgNQFpJ
+unix  2      [ ]         DGRAM                    22686    
+unix  3      [ ]         STREAM     CONNECTED     38853    
+unix  3      [ ]         STREAM     CONNECTED     20419    
+unix  3      [ ]         STREAM     CONNECTED     20638    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39703    @/tmp/dbus-Rq9lgNQFpJ
+unix  2      [ ]         DGRAM                    16754    
+unix  3      [ ]         STREAM     CONNECTED     40054    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22631    
+unix  3      [ ]         STREAM     CONNECTED     38858    
+unix  3      [ ]         STREAM     CONNECTED     38999    /var/run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    16080    
+unix  3      [ ]         STREAM     CONNECTED     39369    
+unix  3      [ ]         STREAM     CONNECTED     22658    
+unix  3      [ ]         STREAM     CONNECTED     40437    
+unix  3      [ ]         STREAM     CONNECTED     39758    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39603    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     39585    @/tmp/dbus-BFP8hts6
+unix  3      [ ]         STREAM     CONNECTED     22667    
+unix  3      [ ]         STREAM     CONNECTED     16941    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39527    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     39934    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     39483    
+unix  3      [ ]         STREAM     CONNECTED     39523    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     22643    
+unix  3      [ ]         STREAM     CONNECTED     39907    
+unix  3      [ ]         STREAM     CONNECTED     39357    
+unix  3      [ ]         STREAM     CONNECTED     16745    
+unix  3      [ ]         STREAM     CONNECTED     39842    
+unix  3      [ ]         STREAM     CONNECTED     38125    
+unix  3      [ ]         STREAM     CONNECTED     23785    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     38610    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     27732    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     16946    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     38840    
+unix  3      [ ]         STREAM     CONNECTED     40070    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     39299    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     22630    
+unix  3      [ ]         STREAM     CONNECTED     40445    
+unix  3      [ ]         STREAM     CONNECTED     15900    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    26349    
+unix  3      [ ]         STREAM     CONNECTED     22654    
+unix  3      [ ]         STREAM     CONNECTED     39956    /run/user/0/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     17796    
+unix  3      [ ]         STREAM     CONNECTED     39520    
+unix  3      [ ]         STREAM     CONNECTED     22675    
+unix  3      [ ]         STREAM     CONNECTED     39904    
+unix  3      [ ]         STREAM     CONNECTED     40000    
+unix  3      [ ]         STREAM     CONNECTED     15625    
+unix  3      [ ]         STREAM     CONNECTED     16863    
+unix  3      [ ]         STREAM     CONNECTED     39820    
+unix  3      [ ]         STREAM     CONNECTED     39609    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     15918    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     39387    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     38603    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     38779    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     16251    
+
+
+
+7. netstat -a :- This command is used to list all ports. 
+
+[root@localhost Desktop]# netstat -a
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 192.168.122.1:domain    0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:ssh             0.0.0.0:*               LISTEN     
+tcp        0      0 localhost:ipp           0.0.0.0:*               LISTEN     
+tcp        0      0 localhost:smtp          0.0.0.0:*               LISTEN     
+tcp6       0      0 [::]:ssh                [::]:*                  LISTEN     
+tcp6       0      0 localhost:ipp           [::]:*                  LISTEN     
+tcp6       0      0 localhost:smtp          [::]:*                  LISTEN     
+udp        0      0 192.168.122.1:domain    0.0.0.0:*                          
+udp        0      0 0.0.0.0:bootps          0.0.0.0:*                          
+udp        0      0 0.0.0.0:ntp             0.0.0.0:*                          
+udp        0      0 localhost:323           0.0.0.0:*                          
+udp        0      0 0.0.0.0:mdns            0.0.0.0:*                          
+udp        0      0 0.0.0.0:60768           0.0.0.0:*                          
+udp6       0      0 [::]:ntp                [::]:*                             
+udp6       0      0 localhost:323           [::]:*                             
+raw        0      0 0.0.0.0:icmp            0.0.0.0:*               7          
+raw    16128      0 0.0.0.0:icmp            0.0.0.0:*               7          
+raw6       0      0 [::]:ipv6-icmp          [::]:*                  7          
+Active UNIX domain sockets (servers and established)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  2      [ ACC ]     STREAM     LISTENING     39487    @/tmp/dbus-BFP8hts6
+unix  2      [ ACC ]     STREAM     LISTENING     39212    @/tmp/.ICE-unix/4665
+unix  2      [ ACC ]     STREAM     LISTENING     27398    /var/run/sdp
+unix  2      [ ACC ]     STREAM     LISTENING     7708     /run/systemd/journal/stdout
+unix  5      [ ]         DGRAM                    7711     /run/systemd/journal/socket
+unix  23     [ ]         DGRAM                    7713     /dev/log
+unix  2      [ ACC ]     STREAM     LISTENING     36050    @/tmp/.X11-unix/X0
+unix  2      [ ACC ]     STREAM     LISTENING     21547    /var/run/libvirt/libvirt-sock
+unix  2      [ ACC ]     STREAM     LISTENING     21549    /var/run/libvirt/libvirt-sock-ro
+unix  2      [ ACC ]     STREAM     LISTENING     21818    /var/run/lsm/ipc/sim
+unix  2      [ ACC ]     STREAM     LISTENING     22623    private/tlsmgr
+unix  2      [ ACC ]     STREAM     LISTENING     22626    private/rewrite
+unix  2      [ ACC ]     STREAM     LISTENING     8766     /run/systemd/private
+unix  2      [ ACC ]     STREAM     LISTENING     22629    private/bounce
+unix  2      [ ACC ]     STREAM     LISTENING     22632    private/defer
+unix  2      [ ACC ]     STREAM     LISTENING     22635    private/trace
+unix  2      [ ACC ]     STREAM     LISTENING     22638    private/verify
+unix  2      [ ACC ]     STREAM     LISTENING     22644    private/proxymap
+unix  2      [ ACC ]     STREAM     LISTENING     22647    private/proxywrite
+unix  2      [ ACC ]     STREAM     LISTENING     22650    private/smtp
+unix  2      [ ACC ]     STREAM     LISTENING     22653    private/relay
+unix  2      [ ACC ]     STREAM     LISTENING     39239    /run/user/0/keyring-leB168/gpg
+unix  2      [ ACC ]     STREAM     LISTENING     22659    private/error
+unix  2      [ ACC ]     STREAM     LISTENING     22662    private/retry
+unix  2      [ ACC ]     STREAM     LISTENING     22665    private/discard
+unix  2      [ ACC ]     STREAM     LISTENING     22668    private/local
+unix  2      [ ACC ]     STREAM     LISTENING     15676    @ISCSID_UIP_ABSTRACT_NAMESPACE
+unix  2      [ ACC ]     STREAM     LISTENING     22671    private/virtual
+unix  2      [ ACC ]     STREAM     LISTENING     15690    /var/run/rpcbind.sock
+unix  2      [ ACC ]     STREAM     LISTENING     22674    private/lmtp
+unix  2      [ ACC ]     STREAM     LISTENING     22677    private/anvil
+unix  2      [ ACC ]     STREAM     LISTENING     22680    private/scache
+unix  2      [ ACC ]     STREAM     LISTENING     36051    /tmp/.X11-unix/X0
+unix  2      [ ACC ]     STREAM     LISTENING     15699    /var/run/cups/cups.sock
+unix  2      [ ACC ]     STREAM     LISTENING     39323    /tmp/.esd-0/socket
+unix  2      [ ACC ]     STREAM     LISTENING     40980    @/dbus-vfs-daemon/socket-91t2sKvs
+unix  2      [ ACC ]     STREAM     LISTENING     40129    @/dbus-vfs-daemon/socket-ChlUJ0GV
+unix  2      [ ACC ]     STREAM     LISTENING     37031    @/tmp/dbus-QyHWjutH
+unix  2      [ ACC ]     STREAM     LISTENING     15708    /var/run/avahi-daemon/socket
+unix  2      [ ACC ]     STREAM     LISTENING     18024    /var/run/NetworkManager/private
+unix  2      [ ACC ]     STREAM     LISTENING     21868    /var/run/lsm/ipc/simc
+unix  2      [ ACC ]     STREAM     LISTENING     22612    public/pickup
+unix  2      [ ACC ]     STREAM     LISTENING     22616    public/cleanup
+unix  2      [ ACC ]     STREAM     LISTENING     39036    /run/user/0/keyring-leB168/control
+unix  2      [ ]         DGRAM                    8765     @/org/freedesktop/systemd1/notify
+unix  2      [ ACC ]     STREAM     LISTENING     37030    @/tmp/dbus-OlHkCuf1
+unix  2      [ ACC ]     STREAM     LISTENING     22619    public/qmgr
+unix  2      [ ACC ]     STREAM     LISTENING     22641    public/flush
+unix  2      [ ACC ]     STREAM     LISTENING     39307    /run/user/0/keyring-leB168/pkcs11
+unix  2      [ ACC ]     STREAM     LISTENING     38418    @/tmp/dbus-LVCCCngqdf
+unix  2      [ ACC ]     STREAM     LISTENING     39309    /run/user/0/keyring-leB168/ssh
+unix  2      [ ACC ]     STREAM     LISTENING     39213    /tmp/.ICE-unix/4665
+unix  2      [ ACC ]     STREAM     LISTENING     39176    /tmp/ssh-FyDKWiNsX0PT/agent.4665
+unix  2      [ ACC ]     STREAM     LISTENING     39325    /run/user/0/pulse/native
+unix  2      [ ]         DGRAM                    11932    /run/systemd/shutdownd
+unix  2      [ ACC ]     STREAM     LISTENING     39327    /run/user/0/pulse/dbus-socket
+unix  2      [ ACC ]     STREAM     LISTENING     22656    public/showq
+unix  2      [ ACC ]     STREAM     LISTENING     15030    /var/run/dbus/system_bus_socket
+unix  2      [ ACC ]     STREAM     LISTENING     15683    @ISCSIADM_ABSTRACT_NAMESPACE
+unix  2      [ ACC ]     STREAM     LISTENING     16078    /var/run/abrt/abrt.socket
+unix  2      [ ACC ]     SEQPACKET  LISTENING     11988    /run/udev/control
+unix  2      [ ACC ]     STREAM     LISTENING     12004    /run/lvm/lvmetad.socket
+unix  2      [ ACC ]     STREAM     LISTENING     38582    @/tmp/dbus-Rq9lgNQFpJ
+unix  2      [ ]         DGRAM                    19329    
+unix  3      [ ]         STREAM     CONNECTED     16881    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     38854    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22611    
+unix  3      [ ]         STREAM     CONNECTED     16613    
+unix  3      [ ]         STREAM     CONNECTED     39708    
+unix  3      [ ]         STREAM     CONNECTED     39210    
+unix  3      [ ]         STREAM     CONNECTED     22636    
+unix  2      [ ]         DGRAM                    22294    
+unix  2      [ ]         DGRAM                    15623    
+unix  3      [ ]         STREAM     CONNECTED     22676    
+unix  3      [ ]         STREAM     CONNECTED     40991    @/tmp/.ICE-unix/4665
+unix  3      [ ]         STREAM     CONNECTED     39470    /run/user/0/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     39589    
+unix  3      [ ]         STREAM     CONNECTED     17947    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     38832    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     22663    
+unix  3      [ ]         STREAM     CONNECTED     39747    
+unix  3      [ ]         STREAM     CONNECTED     15942    
+unix  3      [ ]         STREAM     CONNECTED     38852    
+unix  3      [ ]         STREAM     CONNECTED     39320    
+unix  3      [ ]         STREAM     CONNECTED     19813    
+unix  3      [ ]         STREAM     CONNECTED     35957    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22613    
+unix  3      [ ]         STREAM     CONNECTED     38604    
+unix  3      [ ]         STREAM     CONNECTED     27731    
+unix  3      [ ]         STREAM     CONNECTED     39771    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     39702    
+unix  3      [ ]         STREAM     CONNECTED     16763    
+unix  3      [ ]         STREAM     CONNECTED     39910    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     27390    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22640    
+unix  3      [ ]         STREAM     CONNECTED     39459    
+unix  3      [ ]         STREAM     CONNECTED     38742    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39592    
+unix  3      [ ]         STREAM     CONNECTED     16884    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     40983    @/tmp/dbus-BFP8hts6
+unix  3      [ ]         STREAM     CONNECTED     39931    
+unix  3      [ ]         STREAM     CONNECTED     39364    
+unix  3      [ ]         STREAM     CONNECTED     38553    
+unix  3      [ ]         STREAM     CONNECTED     38463    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     39272    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     27520    
+unix  3      [ ]         STREAM     CONNECTED     22624    
+unix  2      [ ]         DGRAM                    16734    
+unix  3      [ ]         STREAM     CONNECTED     40158    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     40131    @/dbus-vfs-daemon/socket-ChlUJ0GV
+unix  3      [ ]         STREAM     CONNECTED     38615    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39392    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     38605    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     23999    
+unix  3      [ ]         STREAM     CONNECTED     38844    
+unix  3      [ ]         STREAM     CONNECTED     20439    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     38714    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     39484    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     23139    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22655    
+unix  3      [ ]         STREAM     CONNECTED     40236    
+unix  3      [ ]         STREAM     CONNECTED     39933    
+unix  3      [ ]         STREAM     CONNECTED     39528    
+unix  3      [ ]         STREAM     CONNECTED     17961    
+unix  3      [ ]         STREAM     CONNECTED     40050    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     39317    
+unix  3      [ ]         STREAM     CONNECTED     37006    
+unix  3      [ ]         STREAM     CONNECTED     18958    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     39002    @/tmp/dbus-OlHkCuf1
+unix  2      [ ]         DGRAM                    12737    
+unix  3      [ ]         STREAM     CONNECTED     39817    @/tmp/dbus-BFP8hts6
+unix  3      [ ]         STREAM     CONNECTED     39608    
+unix  3      [ ]         STREAM     CONNECTED     39248    @/tmp/dbus-Rq9lgNQFpJ
+unix  3      [ ]         STREAM     CONNECTED     16716    
+unix  3      [ ]         STREAM     CONNECTED     39199    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     23992    
+unix  3      [ ]         STREAM     CONNECTED     19066    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     16196    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     40987    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39521    @/tmp/dbus-BFP8hts6
+unix  3      [ ]         STREAM     CONNECTED     38617    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     22672    
+unix  3      [ ]         STREAM     CONNECTED     39905    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     39526    
+unix  3      [ ]         STREAM     CONNECTED     22648    
+unix  2      [ ]         DGRAM                    22398    
+unix  3      [ ]         STREAM     CONNECTED     40296    
+unix  3      [ ]         STREAM     CONNECTED     39753    
+unix  3      [ ]         STREAM     CONNECTED     39969    
+unix  3      [ ]         STREAM     CONNECTED     22651    
+unix  3      [ ]         STREAM     CONNECTED     40444    
+unix  3      [ ]         STREAM     CONNECTED     15205    
+unix  3      [ ]         STREAM     CONNECTED     39406    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     22627    
+unix  3      [ ]         STREAM     CONNECTED     16009    
+unix  3      [ ]         STREAM     CONNECTED     38123    
+unix  2      [ ]         DGRAM                    15928    
+unix  3      [ ]         STREAM     CONNECTED     39442    
+unix  3      [ ]         STREAM     CONNECTED     38612    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22637    
+unix  3      [ ]         STREAM     CONNECTED     39612    /var/run/NetworkManager/private
+unix  3      [ ]         STREAM     CONNECTED     15622    
+unix  3      [ ]         STREAM     CONNECTED     40990    
+unix  3      [ ]         STREAM     CONNECTED     39461    
+unix  3      [ ]         STREAM     CONNECTED     38794    
+unix  3      [ ]         STREAM     CONNECTED     21593    
+unix  3      [ ]         STREAM     CONNECTED     17620    
+unix  3      [ ]         STREAM     CONNECTED     39374    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     22610    
+unix  3      [ ]         STREAM     CONNECTED     22621    
+unix  3      [ ]         STREAM     CONNECTED     39705    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     39247    
+unix  3      [ ]         STREAM     CONNECTED     38428    
+unix  3      [ ]         STREAM     CONNECTED     18026    
+unix  3      [ ]         STREAM     CONNECTED     39321    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     19864    
+unix  3      [ ]         STREAM     CONNECTED     38891    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39957    /var/run/NetworkManager/private
+unix  3      [ ]         STREAM     CONNECTED     15901    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     38836    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     22664    
+unix  3      [ ]         STREAM     CONNECTED     40440    
+unix  3      [ ]         STREAM     CONNECTED     39748    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22633    
+unix  3      [ ]         STREAM     CONNECTED     39909    
+unix  3      [ ]         STREAM     CONNECTED     15621    
+unix  3      [ ]         STREAM     CONNECTED     41033    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39768    
+unix  3      [ ]         STREAM     CONNECTED     17807    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     38741    
+unix  3      [ ]         STREAM     CONNECTED     22681    
+unix  3      [ ]         STREAM     CONNECTED     35956    
+unix  3      [ ]         STREAM     CONNECTED     38795    @/tmp/dbus-LVCCCngqdf
+unix  2      [ ]         DGRAM                    19247    
+unix  2      [ ]         DGRAM                    18018    
+unix  3      [ ]         STREAM     CONNECTED     39770    
+unix  3      [ ]         STREAM     CONNECTED     26581    
+unix  3      [ ]         STREAM     CONNECTED     17804    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39206    @/tmp/dbus-Rq9lgNQFpJ
+unix  3      [ ]         STREAM     CONNECTED     39271    
+unix  3      [ ]         STREAM     CONNECTED     27521    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22625    
+unix  3      [ ]         STREAM     CONNECTED     39962    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     15902    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     40351    
+unix  3      [ ]         STREAM     CONNECTED     39932    @/tmp/dbus-Rq9lgNQFpJ
+unix  3      [ ]         STREAM     CONNECTED     39339    
+unix  3      [ ]         STREAM     CONNECTED     22660    
+unix  3      [ ]         STREAM     CONNECTED     22669    
+unix  3      [ ]         STREAM     CONNECTED     40964    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     39505    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     39441    /run/user/0/pulse/native
+unix  2      [ ]         DGRAM                    27381    
+unix  3      [ ]         STREAM     CONNECTED     22645    
+unix  3      [ ]         STREAM     CONNECTED     15751    
+unix  2      [ ]         DGRAM                    16725    
+unix  3      [ ]         STREAM     CONNECTED     39839    
+unix  3      [ ]         STREAM     CONNECTED     26358    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     24000    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     18957    
+unix  3      [ ]         STREAM     CONNECTED     39360    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     38588    
+unix  3      [ ]         STREAM     CONNECTED     40049    
+unix  3      [ ]         STREAM     CONNECTED     39318    /var/run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    23315    
+unix  3      [ ]         STREAM     CONNECTED     40130    
+unix  3      [ ]         STREAM     CONNECTED     39205    
+unix  3      [ ]         STREAM     CONNECTED     18027    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     17798    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     23138    
+unix  3      [ ]         STREAM     CONNECTED     40291    
+unix  3      [ ]         STREAM     CONNECTED     39529    @/tmp/dbus-BFP8hts6
+unix  2      [ ]         DGRAM                    17877    
+unix  3      [ ]         STREAM     CONNECTED     40986    
+unix  3      [ ]         STREAM     CONNECTED     39472    
+unix  3      [ ]         STREAM     CONNECTED     39967    
+unix  3      [ ]         STREAM     CONNECTED     22673    
+unix  3      [ ]         STREAM     CONNECTED     41188    
+unix  3      [ ]         STREAM     CONNECTED     39841    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39446    
+unix  3      [ ]         STREAM     CONNECTED     22649    
+unix  3      [ ]         STREAM     CONNECTED     17810    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39816    
+unix  3      [ ]         STREAM     CONNECTED     39607    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     27380    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22618    
+unix  3      [ ]         STREAM     CONNECTED     39595    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     38587    
+unix  3      [ ]         STREAM     CONNECTED     23993    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     19065    
+unix  3      [ ]         STREAM     CONNECTED     16195    
+unix  3      [ ]         STREAM     CONNECTED     36059    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     23791    
+unix  3      [ ]         STREAM     CONNECTED     40438    
+unix  3      [ ]         STREAM     CONNECTED     39754    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     38818    @/tmp/.ICE-unix/4665
+unix  3      [ ]         STREAM     CONNECTED     22652    
+unix  3      [ ]         STREAM     CONNECTED     41191    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     15275    
+unix  3      [ ]         STREAM     CONNECTED     39590    
+unix  3      [ ]         STREAM     CONNECTED     15276    
+unix  3      [ ]         STREAM     CONNECTED     40242    
+unix  3      [ ]         STREAM     CONNECTED     27389    
+unix  3      [ ]         STREAM     CONNECTED     38552    
+unix  3      [ ]         DGRAM                    12747    
+unix  3      [ ]         STREAM     CONNECTED     19865    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     38885    
+unix  3      [ ]         STREAM     CONNECTED     38609    
+unix  3      [ ]         STREAM     CONNECTED     39069    
+unix  3      [ ]         STREAM     CONNECTED     17813    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39378    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     38601    @/tmp/dbus-Rq9lgNQFpJ
+unix  3      [ ]         STREAM     CONNECTED     39870    
+unix  3      [ ]         STREAM     CONNECTED     38888    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     22634    
+unix  3      [ ]         STREAM     CONNECTED     16769    
+unix  3      [ ]         STREAM     CONNECTED     39927    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     40168    
+unix  3      [ ]         STREAM     CONNECTED     22678    
+unix  3      [ ]         STREAM     CONNECTED     40297    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     39504    
+unix  3      [ ]         STREAM     CONNECTED     40125    
+unix  3      [ ]         STREAM     CONNECTED     17771    
+unix  3      [ ]         STREAM     CONNECTED     40981    @/dbus-vfs-daemon/socket-91t2sKvs
+unix  3      [ ]         STREAM     CONNECTED     38811    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     22661    
+unix  3      [ ]         STREAM     CONNECTED     15941    
+unix  3      [ ]         STREAM     CONNECTED     18040    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     16140    
+unix  3      [ ]         STREAM     CONNECTED     39769    /var/run/NetworkManager/private
+unix  3      [ ]         STREAM     CONNECTED     39198    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         DGRAM                    12748    
+unix  3      [ ]         STREAM     CONNECTED     39525    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39298    
+unix  3      [ ]         STREAM     CONNECTED     38602    
+unix  3      [ ]         STREAM     CONNECTED     38826    
+unix  3      [ ]         STREAM     CONNECTED     39704    
+unix  3      [ ]         STREAM     CONNECTED     18039    
+unix  3      [ ]         STREAM     CONNECTED     15624    
+unix  3      [ ]         STREAM     CONNECTED     39208    
+unix  3      [ ]         STREAM     CONNECTED     39447    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     38713    
+unix  3      [ ]         STREAM     CONNECTED     22682    
+unix  3      [ ]         STREAM     CONNECTED     39354    
+unix  3      [ ]         STREAM     CONNECTED     22657    
+unix  3      [ ]         STREAM     CONNECTED     41187    @/tmp/dbus-Rq9lgNQFpJ
+unix  3      [ ]         STREAM     CONNECTED     39757    
+unix  3      [ ]         STREAM     CONNECTED     39522    
+unix  3      [ ]         STREAM     CONNECTED     39584    
+unix  2      [ ]         DGRAM                    17951    
+unix  3      [ ]         STREAM     CONNECTED     40053    
+unix  3      [ ]         STREAM     CONNECTED     38907    
+unix  3      [ ]         STREAM     CONNECTED     38472    
+unix  2      [ ]         DGRAM                    12417    
+unix  3      [ ]         STREAM     CONNECTED     16010    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     17801    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     40166    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39209    
+unix  3      [ ]         STREAM     CONNECTED     38778    
+unix  3      [ ]         STREAM     CONNECTED     18015    
+unix  2      [ ]         DGRAM                    38857    
+unix  3      [ ]         STREAM     CONNECTED     22614    
+unix  3      [ ]         STREAM     CONNECTED     22670    
+unix  3      [ ]         STREAM     CONNECTED     40963    
+unix  3      [ ]         STREAM     CONNECTED     38901    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22642    
+unix  3      [ ]         STREAM     CONNECTED     16798    
+unix  3      [ ]         STREAM     CONNECTED     39908    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     41190    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     41189    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     26357    
+unix  3      [ ]         STREAM     CONNECTED     39588    
+unix  3      [ ]         STREAM     CONNECTED     17797    
+unix  3      [ ]         STREAM     CONNECTED     38887    
+unix  3      [ ]         STREAM     CONNECTED     16141    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     40069    
+unix  2      [ ]         STREAM     CONNECTED     39401    
+unix  3      [ ]         STREAM     CONNECTED     22628    
+unix  3      [ ]         STREAM     CONNECTED     15946    
+unix  3      [ ]         STREAM     CONNECTED     39606    
+unix  2      [ ]         DGRAM                    38263    
+unix  3      [ ]         STREAM     CONNECTED     12575    
+unix  3      [ ]         STREAM     CONNECTED     40127    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     38614    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     39093    
+unix  3      [ ]         STREAM     CONNECTED     22620    
+unix  2      [ ]         DGRAM                    38851    
+unix  3      [ ]         STREAM     CONNECTED     38600    
+unix  3      [ ]         STREAM     CONNECTED     23792    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     16252    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     39462    @/tmp/dbus-LVCCCngqdf
+unix  2      [ ]         STREAM     CONNECTED     37765    @/tmp/dbus-QyHWjutH
+unix  2      [ ]         DGRAM                    39899    
+unix  2      [ ]         DGRAM                    15752    
+unix  3      [ ]         STREAM     CONNECTED     22646    
+unix  3      [ ]         STREAM     CONNECTED     16864    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     38473    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     15899    
+unix  3      [ ]         STREAM     CONNECTED     39270    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     39207    
+unix  3      [ ]         STREAM     CONNECTED     39399    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     39958    /var/run/NetworkManager/private
+unix  3      [ ]         STREAM     CONNECTED     15903    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     40164    
+unix  3      [ ]         STREAM     CONNECTED     38824    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22666    
+unix  3      [ ]         STREAM     CONNECTED     39924    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39440    
+unix  3      [ ]         STREAM     CONNECTED     38611    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     39926    
+unix  3      [ ]         STREAM     CONNECTED     39912    @/tmp/.X11-unix/X0
+unix  2      [ ]         DGRAM                    15626    
+unix  3      [ ]         STREAM     CONNECTED     38616    
+unix  3      [ ]         STREAM     CONNECTED     22679    
+unix  3      [ ]         STREAM     CONNECTED     17946    
+unix  3      [ ]         STREAM     CONNECTED     40988    
+unix  3      [ ]         STREAM     CONNECTED     39469    
+unix  3      [ ]         STREAM     CONNECTED     39070    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     17502    
+unix  3      [ ]         STREAM     CONNECTED     39963    
+unix  3      [ ]         STREAM     CONNECTED     15916    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     39871    @/tmp/dbus-BFP8hts6
+unix  3      [ ]         STREAM     CONNECTED     39997    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     23784    
+unix  3      [ ]         STREAM     CONNECTED     22617    
+unix  3      [ ]         STREAM     CONNECTED     38427    
+unix  2      [ ]         DGRAM                    22702    
+unix  3      [ ]         STREAM     CONNECTED     13556    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     38890    
+unix  3      [ ]         STREAM     CONNECTED     40001    @/tmp/.ICE-unix/4665
+unix  3      [ ]         STREAM     CONNECTED     39269    
+unix  3      [ ]         STREAM     CONNECTED     19814    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     40126    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     40967    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     15016    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22639    
+unix  3      [ ]         STREAM     CONNECTED     39460    @/tmp/dbus-Rq9lgNQFpJ
+unix  2      [ ]         DGRAM                    22686    
+unix  3      [ ]         STREAM     CONNECTED     38853    
+unix  3      [ ]         STREAM     CONNECTED     20419    
+unix  3      [ ]         STREAM     CONNECTED     20638    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39703    @/tmp/dbus-Rq9lgNQFpJ
+unix  2      [ ]         DGRAM                    16754    
+unix  3      [ ]         STREAM     CONNECTED     40054    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22631    
+unix  3      [ ]         STREAM     CONNECTED     38858    
+unix  3      [ ]         STREAM     CONNECTED     38999    /var/run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    16080    
+unix  3      [ ]         STREAM     CONNECTED     39369    
+unix  3      [ ]         STREAM     CONNECTED     22658    
+unix  3      [ ]         STREAM     CONNECTED     40437    
+unix  3      [ ]         STREAM     CONNECTED     39758    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39603    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     39585    @/tmp/dbus-BFP8hts6
+unix  3      [ ]         STREAM     CONNECTED     22667    
+unix  3      [ ]         STREAM     CONNECTED     16941    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39527    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     39934    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     39483    
+unix  3      [ ]         STREAM     CONNECTED     39523    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     22643    
+unix  3      [ ]         STREAM     CONNECTED     39907    
+unix  3      [ ]         STREAM     CONNECTED     39357    
+unix  3      [ ]         STREAM     CONNECTED     16745    
+unix  3      [ ]         STREAM     CONNECTED     39842    
+unix  3      [ ]         STREAM     CONNECTED     38125    
+unix  3      [ ]         STREAM     CONNECTED     23785    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     38610    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     27732    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     16946    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     38840    
+unix  3      [ ]         STREAM     CONNECTED     40070    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     39299    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     22630    
+unix  3      [ ]         STREAM     CONNECTED     40445    
+unix  3      [ ]         STREAM     CONNECTED     15900    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    26349    
+unix  3      [ ]         STREAM     CONNECTED     22654    
+unix  3      [ ]         STREAM     CONNECTED     39956    /run/user/0/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     17796    
+unix  3      [ ]         STREAM     CONNECTED     39520    
+unix  3      [ ]         STREAM     CONNECTED     22675    
+unix  3      [ ]         STREAM     CONNECTED     39904    
+unix  3      [ ]         STREAM     CONNECTED     40000    
+unix  3      [ ]         STREAM     CONNECTED     15625    
+unix  3      [ ]         STREAM     CONNECTED     16863    
+unix  3      [ ]         STREAM     CONNECTED     39820    
+unix  3      [ ]         STREAM     CONNECTED     39609    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     15918    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     39387    @/tmp/dbus-LVCCCngqdf
+unix  3      [ ]         STREAM     CONNECTED     38603    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     38779    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     16251    
+
+
+8. netstat -at :- This commnad wil display all TCP ports. 
+
+[root@localhost Desktop]# netstat -at
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 192.168.122.1:domain    0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:ssh             0.0.0.0:*               LISTEN     
+tcp        0      0 localhost:ipp           0.0.0.0:*               LISTEN     
+tcp        0      0 localhost:smtp          0.0.0.0:*               LISTEN     
+tcp6       0      0 [::]:ssh                [::]:*                  LISTEN     
+tcp6       0      0 localhost:ipp           [::]:*                  LISTEN     
+tcp6       0      0 localhost:smtp          [::]:*                  LISTEN     
+
+
+9. netstat -au :- This commnad wil display all UDP ports.
+
+[root@localhost Desktop]# netstat -au
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+udp        0      0 192.168.122.1:domain    0.0.0.0:*                          
+udp        0      0 0.0.0.0:bootps          0.0.0.0:*                          
+udp        0      0 0.0.0.0:ntp             0.0.0.0:*                          
+udp        0      0 localhost:323           0.0.0.0:*                          
+udp        0      0 0.0.0.0:mdns            0.0.0.0:*                          
+udp        0      0 0.0.0.0:60768           0.0.0.0:*                          
+udp6       0      0 [::]:ntp                [::]:*                             
+udp6       0      0 localhost:323           [::]:*       
+
+
+10. netstat -l :- This command will lists sockets in listening mode.
+                      
+[root@localhost Desktop]# netstat -l
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 192.168.122.1:domain    0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:ssh             0.0.0.0:*               LISTEN     
+tcp        0      0 localhost:ipp           0.0.0.0:*               LISTEN     
+tcp        0      0 localhost:smtp          0.0.0.0:*               LISTEN     
+tcp6       0      0 [::]:ssh                [::]:*                  LISTEN     
+tcp6       0      0 localhost:ipp           [::]:*                  LISTEN     
+tcp6       0      0 localhost:smtp          [::]:*                  LISTEN     
+udp        0      0 192.168.122.1:domain    0.0.0.0:*                          
+udp        0      0 0.0.0.0:bootps          0.0.0.0:*                          
+udp        0      0 0.0.0.0:ntp             0.0.0.0:*                          
+udp        0      0 localhost:323           0.0.0.0:*                          
+udp        0      0 0.0.0.0:mdns            0.0.0.0:*                          
+udp        0      0 0.0.0.0:60768           0.0.0.0:*                          
+udp6       0      0 [::]:ntp                [::]:*                             
+udp6       0      0 localhost:323           [::]:*                             
+raw        0      0 0.0.0.0:icmp            0.0.0.0:*               7          
+raw    16128      0 0.0.0.0:icmp            0.0.0.0:*               7          
+raw6       0      0 [::]:ipv6-icmp          [::]:*                  7          
+Active UNIX domain sockets (only servers)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  2      [ ACC ]     STREAM     LISTENING     39487    @/tmp/dbus-BFP8hts6
+unix  2      [ ACC ]     STREAM     LISTENING     39212    @/tmp/.ICE-unix/4665
+unix  2      [ ACC ]     STREAM     LISTENING     27398    /var/run/sdp
+unix  2      [ ACC ]     STREAM     LISTENING     7708     /run/systemd/journal/stdout
+unix  2      [ ACC ]     STREAM     LISTENING     36050    @/tmp/.X11-unix/X0
+unix  2      [ ACC ]     STREAM     LISTENING     21547    /var/run/libvirt/libvirt-sock
+unix  2      [ ACC ]     STREAM     LISTENING     21549    /var/run/libvirt/libvirt-sock-ro
+unix  2      [ ACC ]     STREAM     LISTENING     21818    /var/run/lsm/ipc/sim
+unix  2      [ ACC ]     STREAM     LISTENING     22623    private/tlsmgr
+unix  2      [ ACC ]     STREAM     LISTENING     22626    private/rewrite
+unix  2      [ ACC ]     STREAM     LISTENING     8766     /run/systemd/private
+unix  2      [ ACC ]     STREAM     LISTENING     22629    private/bounce
+unix  2      [ ACC ]     STREAM     LISTENING     22632    private/defer
+unix  2      [ ACC ]     STREAM     LISTENING     22635    private/trace
+unix  2      [ ACC ]     STREAM     LISTENING     22638    private/verify
+unix  2      [ ACC ]     STREAM     LISTENING     22644    private/proxymap
+unix  2      [ ACC ]     STREAM     LISTENING     22647    private/proxywrite
+unix  2      [ ACC ]     STREAM     LISTENING     22650    private/smtp
+unix  2      [ ACC ]     STREAM     LISTENING     22653    private/relay
+unix  2      [ ACC ]     STREAM     LISTENING     39239    /run/user/0/keyring-leB168/gpg
+unix  2      [ ACC ]     STREAM     LISTENING     22659    private/error
+unix  2      [ ACC ]     STREAM     LISTENING     22662    private/retry
+unix  2      [ ACC ]     STREAM     LISTENING     22665    private/discard
+unix  2      [ ACC ]     STREAM     LISTENING     22668    private/local
+unix  2      [ ACC ]     STREAM     LISTENING     15676    @ISCSID_UIP_ABSTRACT_NAMESPACE
+unix  2      [ ACC ]     STREAM     LISTENING     22671    private/virtual
+unix  2      [ ACC ]     STREAM     LISTENING     15690    /var/run/rpcbind.sock
+unix  2      [ ACC ]     STREAM     LISTENING     22674    private/lmtp
+unix  2      [ ACC ]     STREAM     LISTENING     22677    private/anvil
+unix  2      [ ACC ]     STREAM     LISTENING     22680    private/scache
+unix  2      [ ACC ]     STREAM     LISTENING     36051    /tmp/.X11-unix/X0
+unix  2      [ ACC ]     STREAM     LISTENING     15699    /var/run/cups/cups.sock
+unix  2      [ ACC ]     STREAM     LISTENING     39323    /tmp/.esd-0/socket
+unix  2      [ ACC ]     STREAM     LISTENING     40980    @/dbus-vfs-daemon/socket-91t2sKvs
+unix  2      [ ACC ]     STREAM     LISTENING     40129    @/dbus-vfs-daemon/socket-ChlUJ0GV
+unix  2      [ ACC ]     STREAM     LISTENING     37031    @/tmp/dbus-QyHWjutH
+unix  2      [ ACC ]     STREAM     LISTENING     15708    /var/run/avahi-daemon/socket
+unix  2      [ ACC ]     STREAM     LISTENING     18024    /var/run/NetworkManager/private
+unix  2      [ ACC ]     STREAM     LISTENING     21868    /var/run/lsm/ipc/simc
+unix  2      [ ACC ]     STREAM     LISTENING     22612    public/pickup
+unix  2      [ ACC ]     STREAM     LISTENING     22616    public/cleanup
+unix  2      [ ACC ]     STREAM     LISTENING     39036    /run/user/0/keyring-leB168/control
+unix  2      [ ACC ]     STREAM     LISTENING     37030    @/tmp/dbus-OlHkCuf1
+unix  2      [ ACC ]     STREAM     LISTENING     22619    public/qmgr
+unix  2      [ ACC ]     STREAM     LISTENING     22641    public/flush
+unix  2      [ ACC ]     STREAM     LISTENING     39307    /run/user/0/keyring-leB168/pkcs11
+unix  2      [ ACC ]     STREAM     LISTENING     38418    @/tmp/dbus-LVCCCngqdf
+unix  2      [ ACC ]     STREAM     LISTENING     39309    /run/user/0/keyring-leB168/ssh
+unix  2      [ ACC ]     STREAM     LISTENING     39213    /tmp/.ICE-unix/4665
+unix  2      [ ACC ]     STREAM     LISTENING     39176    /tmp/ssh-FyDKWiNsX0PT/agent.4665
+unix  2      [ ACC ]     STREAM     LISTENING     39325    /run/user/0/pulse/native
+unix  2      [ ACC ]     STREAM     LISTENING     39327    /run/user/0/pulse/dbus-socket
+unix  2      [ ACC ]     STREAM     LISTENING     22656    public/showq
+unix  2      [ ACC ]     STREAM     LISTENING     15030    /var/run/dbus/system_bus_socket
+unix  2      [ ACC ]     STREAM     LISTENING     15683    @ISCSIADM_ABSTRACT_NAMESPACE
+unix  2      [ ACC ]     STREAM     LISTENING     16078    /var/run/abrt/abrt.socket
+unix  2      [ ACC ]     SEQPACKET  LISTENING     11988    /run/udev/control
+unix  2      [ ACC ]     STREAM     LISTENING     12004    /run/lvm/lvmetad.socket
+unix  2      [ ACC ]     STREAM     LISTENING     38582    @/tmp/dbus-Rq9lgNQFpJ
+
+
+11. netstat -lt :- this command will lists all sockets of TCP ports in listening mode.
+
+[root@localhost Desktop]# netstat -lt
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 192.168.122.1:domain    0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:ssh             0.0.0.0:*               LISTEN     
+tcp        0      0 localhost:ipp           0.0.0.0:*               LISTEN     
+tcp        0      0 localhost:smtp          0.0.0.0:*               LISTEN     
+tcp6       0      0 [::]:ssh                [::]:*                  LISTEN     
+tcp6       0      0 localhost:ipp           [::]:*                  LISTEN     
+tcp6       0      0 localhost:smtp          [::]:*                  LISTEN     
+
+
+12. netstat -lu :- This command will lists all sockets of UDP ports in listening mode.
+
+[root@localhost Desktop]# netstat -lu
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+udp        0      0 192.168.122.1:domain    0.0.0.0:*                          
+udp        0      0 0.0.0.0:bootps          0.0.0.0:*                          
+udp        0      0 0.0.0.0:ntp             0.0.0.0:*                          
+udp        0      0 localhost:323           0.0.0.0:*                          
+udp        0      0 0.0.0.0:mdns            0.0.0.0:*                          
+udp        0      0 0.0.0.0:60768           0.0.0.0:*                          
+udp6       0      0 [::]:ntp                [::]:*                             
+udp6       0      0 localhost:323           [::]:*           
+
+
+13. netstat -s :- This commnad shows the statistics for each protocol. 
+                  
+[root@localhost Desktop]# netstat -s
+Ip:
+    18411 total packets received
+    0 forwarded
+    0 incoming packets discarded
+    528 incoming packets delivered
+    708 requests sent out
+    32 dropped because of missing route
+Icmp:
+    192 ICMP messages received
+    0 input ICMP message failed.
+    ICMP input histogram:
+        destination unreachable: 2
+        echo requests: 21
+        echo replies: 169
+    226 ICMP messages sent
+    0 ICMP messages failed
+    ICMP output histogram:
+        destination unreachable: 3
+        echo request: 202
+        echo replies: 21
+IcmpMsg:
+        InType0: 169
+        InType3: 2
+        InType8: 21
+        OutType0: 21
+        OutType3: 3
+        OutType8: 202
+Tcp:
+    24 active connections openings
+    0 passive connection openings
+    0 failed connection attempts
+    0 connection resets received
+    0 connections established
+    73 segments received
+    117 segments send out
+    24 segments retransmited
+    0 bad segments received.
+    0 resets sent
+Udp:
+    261 packets received
+    2 packets to unknown port received.
+    0 packet receive errors
+    337 packets sent
+    0 receive buffer errors
+    0 send buffer errors
+UdpLite:
+TcpExt:
+    19 TCP sockets finished time wait in fast timer
+    2 delayed acks sent
+    Quick ack mode was activated 1 times
+    2 packet headers predicted
+    6 acknowledgments not containing data payload received
+    9 congestion windows recovered without slow start after partial ack
+    12 other TCP timeouts
+    1 DSACKs sent for old packets
+    2 DSACKs received
+    2 connections aborted due to timeout
+    TCPSackShiftFallback: 2
+    TCPRcvCoalesce: 1
+IpExt:
+    InNoRoutes: 3
+    InMcastPkts: 10986
+    OutMcastPkts: 29
+    InBcastPkts: 5761
+    InOctets: 2272823
+    OutOctets: 54791
+    InMcastOctets: 1485202
+    OutMcastOctets: 4819
+    InBcastOctets: 627739
+[root@localhost Desktop]# netstat -st
+IcmpMsg:
+    InType0: 169
+    InType3: 2
+    InType8: 21
+    OutType0: 21
+    OutType3: 3
+    OutType8: 202
+Tcp:
+    24 active connections openings
+    0 passive connection openings
+    0 failed connection attempts
+    0 connection resets received
+    0 connections established
+    73 segments received
+    117 segments send out
+    24 segments retransmited
+    0 bad segments received.
+    0 resets sent
+UdpLite:
+TcpExt:
+    19 TCP sockets finished time wait in fast timer
+    2 delayed acks sent
+    Quick ack mode was activated 1 times
+    2 packet headers predicted
+    6 acknowledgments not containing data payload received
+    9 congestion windows recovered without slow start after partial ack
+    12 other TCP timeouts
+    1 DSACKs sent for old packets
+    2 DSACKs received
+    2 connections aborted due to timeout
+    TCPSackShiftFallback: 2
+    TCPRcvCoalesce: 1
+IpExt:
+    InNoRoutes: 3
+    InMcastPkts: 11111
+    OutMcastPkts: 29
+    InBcastPkts: 5794
+    InOctets: 2300397
+    OutOctets: 54791
+    InMcastOctets: 1504706
+    OutMcastOctets: 4819
+    InBcastOctets: 633469
+[root@localhost Desktop]# 
+[root@localhost Desktop]# netstat -su
+IcmpMsg:
+    InType0: 169
+    InType3: 2
+    InType8: 21
+    OutType0: 21
+    OutType3: 3
+    OutType8: 202
+Udp:
+    261 packets received
+    2 packets to unknown port received.
+    0 packet receive errors
+    337 packets sent
+    0 receive buffer errors
+    0 send buffer errors
+UdpLite:
+IpExt:
+    InNoRoutes: 3
+    InMcastPkts: 11179
+    OutMcastPkts: 29
+    InBcastPkts: 5820
+    InOctets: 2313970
+    OutOctets: 54791
+    InMcastOctets: 1513325
+    OutMcastOctets: 4819
+    InBcastOctets: 637643
+[root@localhost Desktop]# 
+
+
+[root@localhost Desktop]# traceroute
+Usage:
+  traceroute [ -46dFITnreAUDV ] [ -f first_ttl ] [ -g gate,... ] [ -i device ] [ -m max_ttl ] [ -N squeries ] [ -p port ] [ -t tos ] [ -l flow_label ] [ -w waittime ] [ -q nqueries ] [ -s src_addr ] [ -z sendwait ] [ --fwmark=num ] host [ packetlen ]
+Options:
+  -4                          Use IPv4
+  -6                          Use IPv6
+  -d  --debug                 Enable socket level debugging
+  -F  --dont-fragment         Do not fragment packets
+  -f first_ttl  --first=first_ttl
+                              Start from the first_ttl hop (instead from 1)
+  -g gate,...  --gateway=gate,...
+                              Route packets through the specified gateway
+                              (maximum 8 for IPv4 and 127 for IPv6)
+  -I  --icmp                  Use ICMP ECHO for tracerouting
+  -T  --tcp                   Use TCP SYN for tracerouting (default port is 80)
+  -i device  --interface=device
+                              Specify a network interface to operate with
+  -m max_ttl  --max-hops=max_ttl
+                              Set the max number of hops (max TTL to be
+                              reached). Default is 30
+  -N squeries  --sim-queries=squeries
+                              Set the number of probes to be tried
+                              simultaneously (default is 16)
+  -n                          Do not resolve IP addresses to their domain names
+  -p port  --port=port        Set the destination port to use. It is either
+                              initial udp port value for "default" method
+                              (incremented by each probe, default is 33434), or
+                              initial seq for "icmp" (incremented as well,
+                              default from 1), or some constant destination
+                              port for other methods (with default of 80 for
+                              "tcp", 53 for "udp", etc.)
+  -t tos  --tos=tos           Set the TOS (IPv4 type of service) or TC (IPv6
+                              traffic class) value for outgoing packets
+  -l flow_label  --flowlabel=flow_label
+                              Use specified flow_label for IPv6 packets
+  -w waittime  --wait=waittime
+                              Set the number of seconds to wait for response to
+                              a probe (default is 5.0). Non-integer (float
+                              point) values allowed too
+  -q nqueries  --queries=nqueries
+                              Set the number of probes per each hop. Default is
+                              3
+  -r                          Bypass the normal routing and send directly to a
+                              host on an attached network
+  -s src_addr  --source=src_addr
+                              Use source src_addr for outgoing packets
+  -z sendwait  --sendwait=sendwait
+                              Minimal time interval between probes (default 0).
+                              If the value is more than 10, then it specifies a
+                              number in milliseconds, else it is a number of
+                              seconds (float point values allowed too)
+  -e  --extensions            Show ICMP extensions (if present), including MPLS
+  -A  --as-path-lookups       Perform AS path lookups in routing registries and
+                              print results directly after the corresponding
+                              addresses
+  -M name  --module=name      Use specified module (either builtin or external)
+                              for traceroute operations. Most methods have
+                              their shortcuts (`-I' means `-M icmp' etc.)
+  -O OPTS,...  --options=OPTS,...
+                              Use module-specific option OPTS for the
+                              traceroute module. Several OPTS allowed,
+                              separated by comma. If OPTS is "help", print info
+                              about available options
+  --sport=num                 Use source port num for outgoing packets. Implies
+                              `-N 1'
+  --fwmark=num                Set firewall mark for outgoing packets
+  -U  --udp                   Use UDP to particular port for tracerouting
+                              (instead of increasing the port per each probe),
+                              default port is 53
+  -UL                         Use UDPLITE for tracerouting (default dest port
+                              is 53)
+  -D  --dccp                  Use DCCP Request for tracerouting (default port
+                              is 33434)
+  -P prot  --protocol=prot    Use raw packet of protocol prot for tracerouting
+  --mtu                       Discover MTU along the path being traced. Implies
+                              `-F -N 1'
+  --back                      Guess the number of hops in the backward path and
+                              print if it differs
+  -V  --version               Print version info and exit
+  --help                      Read this help and exit
+
+Arguments:
++     host          The host to traceroute to
+      packetlen     The full packet length (default is the length of an IP
+                    header plus 40). Can be ignored or increased to a minimal
+                    allowed value
+[root@localhost Desktop]# ifconfig
+enp63s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.10.2.204  netmask 255.255.240.0  broadcast 10.10.15.255
+        inet6 fe80::ae16:2dff:fe12:94e2  prefixlen 64  scopeid 0x20<link>
+        ether ac:16:2d:12:94:e2  txqueuelen 1000  (Ethernet)
+        RX packets 58533  bytes 5213695 (4.9 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 695  bytes 63908 (62.4 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 18  
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 0  (Local Loopback)
+        RX packets 57  bytes 4960 (4.8 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 57  bytes 4960 (4.8 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+virbr0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 192.168.122.1  netmask 255.255.255.0  broadcast 192.168.122.255
+        ether 52:54:00:a0:64:b7  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+[root@localhost Desktop]# ifconfig -a
+enp63s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.10.2.204  netmask 255.255.240.0  broadcast 10.10.15.255
+        inet6 fe80::ae16:2dff:fe12:94e2  prefixlen 64  scopeid 0x20<link>
+        ether ac:16:2d:12:94:e2  txqueuelen 1000  (Ethernet)
+        RX packets 58901  bytes 5251415 (5.0 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 698  bytes 64160 (62.6 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 18  
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 0  (Local Loopback)
+        RX packets 57  bytes 4960 (4.8 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 57  bytes 4960 (4.8 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+virbr0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 192.168.122.1  netmask 255.255.255.0  broadcast 192.168.122.255
+        ether 52:54:00:a0:64:b7  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+virbr0-nic: flags=4098<BROADCAST,MULTICAST>  mtu 1500
+        ether 52:54:00:a0:64:b7  txqueuelen 500  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+
+14. netstat -st :- This command will show the statistics for TCP protocol.
+
+[root@localhost Desktop]# netstat -st
+IcmpMsg:
+    InType0: 169
+    InType3: 2
+    InType8: 21
+    OutType0: 21
+    OutType3: 3
+    OutType8: 202
+Tcp:
+    24 active connections openings
+    0 passive connection openings
+    0 failed connection attempts
+    0 connection resets received
+    0 connections established
+    73 segments received
+    117 segments send out
+    24 segments retransmited
+    0 bad segments received.
+    0 resets sent
+UdpLite:
+TcpExt:
+    19 TCP sockets finished time wait in fast timer
+    2 delayed acks sent
+    Quick ack mode was activated 1 times
+    2 packet headers predicted
+    6 acknowledgments not containing data payload received
+    9 congestion windows recovered without slow start after partial ack
+    12 other TCP timeouts
+    1 DSACKs sent for old packets
+    2 DSACKs received
+    2 connections aborted due to timeout
+    TCPSackShiftFallback: 2
+    TCPRcvCoalesce: 1
+IpExt:
+    InNoRoutes: 3
+    InMcastPkts: 11111
+    OutMcastPkts: 29
+    InBcastPkts: 5794
+    InOctets: 2300397
+    OutOctets: 54791
+    InMcastOctets: 1504706
+    OutMcastOctets: 4819
+    InBcastOctets: 633469
+
+
+
+15. netstat -su:- This command will show the statistics for UDP protocol.
+
+[root@localhost Desktop]# netstat -su
+IcmpMsg:
+    InType0: 169
+    InType3: 2
+    InType8: 21
+    OutType0: 21
+    OutType3: 3
+    OutType8: 202
+Udp:
+    261 packets received
+    2 packets to unknown port received.
+    0 packet receive errors
+    337 packets sent
+    0 receive buffer errors
+    0 send buffer errors
+UdpLite:
+IpExt:
+    InNoRoutes: 3
+    InMcastPkts: 11179
+    OutMcastPkts: 29
+    InBcastPkts: 5820
+    InOctets: 2313970
+    OutOctets: 54791
+    InMcastOctets: 1513325
+    OutMcastOctets: 4819
+    InBcastOctets: 637643
+
+16. traceroute :- traceroute is a network troubleshooting utility which shows number of hops taken to reach destination also determine packet travelling path. 
+For example, traceroute google.com
+or 
+traceroute www.google.com
+
+
+[root@localhost Desktop]# traceroute
+Usage:
+  traceroute [ -46dFITnreAUDV ] [ -f first_ttl ] [ -g gate,... ] [ -i device ] [ -m max_ttl ] [ -N squeries ] [ -p port ] [ -t tos ] [ -l flow_label ] [ -w waittime ] [ -q nqueries ] [ -s src_addr ] [ -z sendwait ] [ --fwmark=num ] host [ packetlen ]
+Options:
+  -4                          Use IPv4
+  -6                          Use IPv6
+  -d  --debug                 Enable socket level debugging
+  -F  --dont-fragment         Do not fragment packets
+  -f first_ttl  --first=first_ttl
+                              Start from the first_ttl hop (instead from 1)
+  -g gate,...  --gateway=gate,...
+                              Route packets through the specified gateway
+                              (maximum 8 for IPv4 and 127 for IPv6)
+  -I  --icmp                  Use ICMP ECHO for tracerouting
+  -T  --tcp                   Use TCP SYN for tracerouting (default port is 80)
+  -i device  --interface=device
+                              Specify a network interface to operate with
+  -m max_ttl  --max-hops=max_ttl
+                              Set the max number of hops (max TTL to be
+                              reached). Default is 30
+  -N squeries  --sim-queries=squeries
+                              Set the number of probes to be tried
+                              simultaneously (default is 16)
+  -n                          Do not resolve IP addresses to their domain names
+  -p port  --port=port        Set the destination port to use. It is either
+                              initial udp port value for "default" method
+                              (incremented by each probe, default is 33434), or
+                              initial seq for "icmp" (incremented as well,
+                              default from 1), or some constant destination
+                              port for other methods (with default of 80 for
+                              "tcp", 53 for "udp", etc.)
+  -t tos  --tos=tos           Set the TOS (IPv4 type of service) or TC (IPv6
+                              traffic class) value for outgoing packets
+  -l flow_label  --flowlabel=flow_label
+                              Use specified flow_label for IPv6 packets
+  -w waittime  --wait=waittime
+                              Set the number of seconds to wait for response to
+                              a probe (default is 5.0). Non-integer (float
+                              point) values allowed too
+  -q nqueries  --queries=nqueries
+                              Set the number of probes per each hop. Default is
+                              3
+  -r                          Bypass the normal routing and send directly to a
+                              host on an attached network
+  -s src_addr  --source=src_addr
+                              Use source src_addr for outgoing packets
+  -z sendwait  --sendwait=sendwait
+                              Minimal time interval between probes (default 0).
+                              If the value is more than 10, then it specifies a
+                              number in milliseconds, else it is a number of
+                              seconds (float point values allowed too)
+  -e  --extensions            Show ICMP extensions (if present), including MPLS
+  -A  --as-path-lookups       Perform AS path lookups in routing registries and
+                              print results directly after the corresponding
+                              addresses
+  -M name  --module=name      Use specified module (either builtin or external)
+                              for traceroute operations. Most methods have
+                              their shortcuts (`-I' means `-M icmp' etc.)
+  -O OPTS,...  --options=OPTS,...
+                              Use module-specific option OPTS for the
+                              traceroute module. Several OPTS allowed,
+                              separated by comma. If OPTS is "help", print info
+                              about available options
+  --sport=num                 Use source port num for outgoing packets. Implies
+                              `-N 1'
+  --fwmark=num                Set firewall mark for outgoing packets
+  -U  --udp                   Use UDP to particular port for tracerouting
+                              (instead of increasing the port per each probe),
+                              default port is 53
+  -UL                         Use UDPLITE for tracerouting (default dest port
+                              is 53)
+  -D  --dccp                  Use DCCP Request for tracerouting (default port
+                              is 33434)
+  -P prot  --protocol=prot    Use raw packet of protocol prot for tracerouting
+  --mtu                       Discover MTU along the path being traced. Implies
+                              `-F -N 1'
+  --back                      Guess the number of hops in the backward path and
+                              print if it differs
+  -V  --version               Print version info and exit
+  --help                      Read this help and exit
+
+Arguments:
++     host          The host to traceroute to
+      packetlen     The full packet length (default is the length of an IP
+                    header plus 40). Can be ignored or increased to a minimal
+                    allowed value
+
+
+16. 
+
+[root@localhost Desktop]# traceroute www.google.com
+traceroute to www.google.com (142.250.77.68), 30 hops max, 60 byte packets
+ 1  10.10.0.1 (10.10.0.1)  321.054 ms  320.978 ms  320.934 ms
+ 2  103.249.240.33 (103.249.240.33)  320.890 ms  320.857 ms  320.787 ms
+ 3  10.199.199.233 (10.199.199.233)  355.572 ms  355.631 ms  355.604 ms
+ 4  * * *
+ 5  pnq-static-186.115.243.103-gazonindia.com (103.243.115.186)  68.857 ms  68.812 ms  68.665 ms
+ 6  108.170.248.193 (108.170.248.193)  68.652 ms  71.508 ms 108.170.248.209 (108.170.248.209)  71.514 ms
+ 7  142.250.238.199 (142.250.238.199)  71.429 ms 142.250.238.197 (142.250.238.197)  71.363 ms  104.508 ms
+ 8  bom07s27-in-f4.1e100.net (142.250.77.68)  104.323 ms  104.350 ms  104.283 ms
+
+
+17. ifconfig :- ifconfig is used for displaying network interface information. ifconfig ( interface configurator ) command is use ot initialize an interface, assign IP address to interface and enable or disable interface on demand. With this commnad you can view IP address and Hardware / MAC address assign to interface and also MTU ( Maximum transmission unit ) size.
+
+[root@localhost Desktop]# ifconfig
+enp63s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.10.2.204  netmask 255.255.240.0  broadcast 10.10.15.255
+        inet6 fe80::ae16:2dff:fe12:94e2  prefixlen 64  scopeid 0x20<link>
+        ether ac:16:2d:12:94:e2  txqueuelen 1000  (Ethernet)
+        RX packets 58533  bytes 5213695 (4.9 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 695  bytes 63908 (62.4 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 18  
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 0  (Local Loopback)
+        RX packets 57  bytes 4960 (4.8 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 57  bytes 4960 (4.8 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+virbr0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 192.168.122.1  netmask 255.255.255.0  broadcast 192.168.122.255
+        ether 52:54:00:a0:64:b7  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+
+18. inconfig -a :- This command shows all network configuration and settings.
+
+[root@localhost Desktop]# ifconfig -a
+enp63s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.10.2.204  netmask 255.255.240.0  broadcast 10.10.15.255
+        inet6 fe80::ae16:2dff:fe12:94e2  prefixlen 64  scopeid 0x20<link>
+        ether ac:16:2d:12:94:e2  txqueuelen 1000  (Ethernet)
+        RX packets 58901  bytes 5251415 (5.0 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 698  bytes 64160 (62.6 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 18  
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 0  (Local Loopback)
+        RX packets 57  bytes 4960 (4.8 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 57  bytes 4960 (4.8 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+virbr0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 192.168.122.1  netmask 255.255.255.0  broadcast 192.168.122.255
+        ether 52:54:00:a0:64:b7  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+virbr0-nic: flags=4098<BROADCAST,MULTICAST>  mtu 1500
+        ether 52:54:00:a0:64:b7  txqueuelen 500  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+
+19. nslookup :- If you know the IP address it will dispaly host name. To find all the IP addresses for the given domain name, the command nslookup is used. You must have a connection to internet for this utility to be useful.
+
+[root@localhost Desktop]# nslookup www.google.com
+Server:		8.8.8.8
+Address:	8.8.8.8#53
+
+Non-authoritative answer:
+Name:	www.google.com
+Address: 142.250.183.100
+
+
+20. nmap :- Network mapper tool to discover hosts and services on a computer network. Syntax :- nmap <ip-address>
+
+[root@localhost Desktop]#  nmap 127.0.0.1
+bash: nmap: command not found...
+[root@localhost Desktop]# nmap 127.0.0.1
+bash: nmap: command not found...
+[root@localhost Desktop]# 
+
+
+
