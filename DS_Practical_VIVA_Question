@@ -1,0 +1,31 @@
+1.What is BST?
+2.Operation that are possible on BST.
+3.Properties of BSt
+4.What is graph?How many ways are to represent graph in memory.
+5.How to we store adjecency matrix in memory?
+6.How to we store adjecency list in memory? 
+7.Calculate adjecency matrix for any graph(dirested and undirected graph)
+8.Calulate the adjecency list for any graph.
+9.What is MST?Types or algorithm that we use to calulate MST
+10.What is topological sort?How we calculate topological sort for any graph.
+11.How many traversing technique for graph?Which one.
+12.What is DFS?how we traverse graph using DFS.
+12.What is BFS?how we traverse graph using BFS.
+13.why we use Floyd Warshall’s algorithm.
+14.why we use Dijkstra’s shortest path algorithm.
+15.What is level of tree?How we calculate level of tree?
+16.What is height of tree?How we calculate height of tree and node?
+17.what is indegree, outdegree and total degree of vertex in graph?
+18.How Heapsort work?
+19.What is max heap?
+20.What is Min heap?
+21.what is Linear data structure?
+22.What is non linear data structure?
+23.Name of non lineaer data structure?
+24.What AVL tree?Properties of AVL Tree?
+25.What is Red black tree?Proerties of red black tree.
+26.What is hash table?
+27.Why we use hash table?
+28.What are the methods we use to solve collision.
+29.What is collision?why collision occure?
+30.what is Data structure?
